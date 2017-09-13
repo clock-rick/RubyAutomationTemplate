@@ -7,6 +7,8 @@ This document will instruct how to get rolling with this automation template. At
 * Optionally you can use an IDE such as [RubyMine](https://www.jetbrains.com/ruby/download/) or other text editor such as [Sublime](https://www.sublimetext.com/download). For now this readme is going to follow the Rubymine setup.
 
 ## Clone from the repository
+
+### RubyMine
 1. Open Rubymine.
 2. On the Welcome screen, click on 'Check out from Version Control'.
 3. Select Github and a "Clone Repository" window will open.
@@ -15,6 +17,12 @@ This document will instruct how to get rolling with this automation template. At
 6. Change the Directoy name to the project name this will be created for.
 7. Click clone.
 8. You will be prompted to open the directory that you just created. Click Yes.
+
+### Terminal
+1. `cd <parent-directory>`
+2. `git clone git@github.com:sonjaq/RubyAutomationTemplate.git`
+3. `cd RubyAutomationTemplate`
+4. `bundle` 
 
 ## General Information
 The template comes with 4 files that will be of importance. The abstract_base_page.rb, the rename_this_page.rb, the some_test.rb, and the Gemfile. These files will need to be edited to conform to your own project. The following instructions will go over how to edit each file and a general explanation of how the files are meant to be utilized.
@@ -49,5 +57,6 @@ This file contains the base functionality that other page objects will utilize i
  A Gemfile is a file we create which is used for describing gem dependencies for Ruby programs. A gem is a collection of Ruby code that we can extract into a “collection” which we can call later. In order to install the gems, the bundler needs to be run to install/update the gems. To do so:
  ### RubyMine
  1. Click Tools > Bundler > Install
- ### Terminal
+ ### Terminal (unless you did this at the time of install)
+ 1. `cd <path-to>/RubyAutomationTemplate`
  1. `bundle`
