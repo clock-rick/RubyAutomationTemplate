@@ -47,4 +47,7 @@ This file contains the base functionality that other page objects will utilize i
  
  ## Gemfile
  A Gemfile is a file we create which is used for describing gem dependencies for Ruby programs. A gem is a collection of Ruby code that we can extract into a “collection” which we can call later. In order to install the gems, the bundler needs to be run to install/update the gems. To do so:
+ ### RubyMine
  1. Click Tools > Bundler > Install
+ ### Terminal
+ 1. `bundle`
