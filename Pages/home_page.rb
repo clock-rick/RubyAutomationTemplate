@@ -6,7 +6,7 @@ require_relative 'abstract_base_page'
 @url_extension = 'Child Page url eg /contacts'
 
 # This class will contain all the page definitions you want to create. The Class inherits from the AbstractBasePage
-class RenameThisPage < AbstractBasePage
+class HomePage < AbstractBasePage
 
   # Below is an example of a definition. This will contain the logic for whatever feature you create.
   def some_functionality
