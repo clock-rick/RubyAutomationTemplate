@@ -1,25 +1,33 @@
 # This area will contain required gems and pages.
 require 'selenium-webdriver'
 require_relative 'abstract_base_page'
+require 'colorize'
 
 # Enter in the url for the child page here.
-@url_extension = 'Child Page url eg /contacts'
+@url_extension = '/'
 
 # This class will contain all the page definitions you want to create. The Class inherits from the AbstractBasePage
-class RenameThisPage < AbstractBasePage
+class HomePage < AbstractBasePage
 
   # Below is an example of a definition. This will contain the logic for whatever feature you create.
-  def some_functionality
+  def logo_url_check
+
 
     # Declare any variables below.
-    test_string = 'This is a string variable.'
-    num1 = 2
-    bool_1 = true
+    logo_url = 'https://clockwork.com/'
+
 
     # Capture WebElements here
-    name_field = @driver.find_element(:id, 'form_223_0')
+    clockwork_logo = @driver.find_element(:id, 'logo')
 
     # Enter logic below.
-    name_field.action.send_keys('Joe Cool')
+    clockwork_logo.click
+    logo_current_url = @driver.current_url.to_s
+    if logo_current_url == logo_url
+      puts 'TEST PASS'.green + " logo directed to #{logo_current_url}"
+    else
+      puts 'TEST FAIL'.red + " logo directed to #{logo_current_url}"
+    end
+
   end
 end
